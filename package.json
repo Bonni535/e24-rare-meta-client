@@ -1,8 +1,8 @@
 {
-  "name": "next-firebase-starter",
+  "name": "rare-clientside-application",
   "private": true,
   "version": "1.0.0",
-  "author": "Trinity Christiana",
+  "author": "Cody Tucker, Luca Bonini, Nathan Welton, Greg Markus",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
