@@ -23,6 +23,9 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
+            <Link href="/categories" passHref>
+              <Nav.Link>Categories</Nav.Link>
+            </Link>
             <Link passHref href="/">
               <Nav.Link>All Posts</Nav.Link>
             </Link>
@@ -45,4 +48,3 @@ export default function NavBar() {
     </Navbar>
   );
 }
-
