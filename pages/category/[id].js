@@ -35,7 +35,15 @@ function ViewCategory() {
           <Link href={`/category/edit/${id}`} passHref>
             <Button className="editBtn m-2" variant="outline-info">EDIT</Button>
           </Link>
-          <Button variant="outline-danger" onClick={() => deleteCategory(id).then(() => router.push('/categories'))} className="deleteBtn m-2">
+          <Button
+            variant="outline-danger"
+            onClick={() => {
+              if (window.confirm('Are you sure you want to delete this category?')) {
+                deleteCategory(id).then(() => router.push('/categories'));
+              }
+            }}
+            className="deleteBtn m-2"
+          >
             DELETE
           </Button>
         </Card.Body>
