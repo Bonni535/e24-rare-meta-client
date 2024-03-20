@@ -84,5 +84,5 @@ const updateCategory = (payload) => new Promise((resolve, reject) => {
 });
 
 export {
-  getCategories, createCategory, getSingleCategory, deleteCategory, updateCategory,
+  getCategories, createCategory, getSingleCategory, deleteCategory, updateCategory, endpoint
 };
