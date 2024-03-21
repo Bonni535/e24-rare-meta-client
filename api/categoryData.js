@@ -69,7 +69,7 @@ const updateCategory = (payload) => new Promise((resolve, reject) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload), // This line was missing
+    body: JSON.stringify(payload),
   })
     .then((response) => {
       if (!response.ok) {
@@ -83,6 +83,23 @@ const updateCategory = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getPostsByCategory = (categoryId) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/posts/byCategory/${categoryId}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => resolve(data))
+    .catch((error) => reject(error));
+});
+
 export {
-  getCategories, createCategory, getSingleCategory, deleteCategory, updateCategory,
+  getCategories, createCategory, getSingleCategory, deleteCategory, updateCategory, getPostsByCategory,
 };
