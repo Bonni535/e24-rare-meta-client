@@ -29,12 +29,11 @@ function TagForm({ tagObj }) {
     e.preventDefault();
     // If the item already exists in the database...
     if (tagObj.id) {
-        console.log(tagObj.id);
       // Make the Update API call and then route the user to the Events page.
       updateTag(tagObj.id, formInput).then(() => router.push('/tags'));
       // Else start running the Create Tag function
     } else {
-        createTag(formInput).then(() => router.push('/tags'));
+      createTag(formInput).then(() => router.push('/tags'));
     }
   };
 
@@ -61,17 +60,17 @@ function TagForm({ tagObj }) {
 }
 
 TagForm.propTypes = {
-  obj: PropTypes.shape({
+  tagObj: PropTypes.shape({
     label: PropTypes.string,
     id: PropTypes.number,
   }),
 };
 
 TagForm.defaultProps = {
-    tagObj: PropTypes.shape({
-        label: PropTypes.string,
-        id: PropTypes.number,
-      }),      
+  tagObj: PropTypes.shape({
+    label: PropTypes.string,
+    id: PropTypes.number,
+  }),
 };
 
 export default TagForm;
