@@ -35,7 +35,7 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Category Manager</Nav.Link>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href="/tags">
               <Nav.Link>Tag Manager</Nav.Link>
             </Link>
           </Nav>
