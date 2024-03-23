@@ -25,7 +25,7 @@ function PostCard({ postObj, onUpdate }) {
         <Link href={`/post/${postObj.id}`} passHref>
           <Button variant="primary" className="viewBtn m-2">VIEW</Button>
         </Link>
-        <Link href={`/posts/edit/${postObj.id}`} passHref>
+        <Link href={`/post/edit/${postObj.id}`} passHref>
           <Button className="editBtn m-2" variant="outline-info">EDIT</Button>
         </Link>
         <Button variant="outline-warning" onClick={deleteThisPost} className="deleteBtn m-2">
